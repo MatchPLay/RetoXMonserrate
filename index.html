@@ -91,14 +91,16 @@
     <div class="meta">
       <p><strong>👥 Participantes:</strong> 36 / 100</p>
       <p><strong>💰 Fondos:</strong> $3.200.000 / $10.000.000</p>
-      <p><strong>⏳ Días restantes:</strong> <span id="contador-dias"></span></p>
+      <p><strong>⏳ Días restantes:</strong> <span id="contador-dias">cargando...</span></p>
 
       <script>
+      document.addEventListener("DOMContentLoaded", function () {
       const fechaEvento = new Date("2025-05-17T00:00:00");
       const hoy = new Date();
       const diferencia = fechaEvento - hoy;
       const diasRestantes = Math.ceil(diferencia / (1000 * 60 * 60 * 24));
       document.getElementById("contador-dias").textContent = diasRestantes + " días";
+      });
       </script>
     </div>
 
